@@ -1,4 +1,4 @@
-const pwdFormula = () => {
+const pwdFormula = (cmd) => {
   const { cwd } = require("node:process");
   if (cmd == "pwd") {
     process.stdout.write(`${cwd()}`);
@@ -6,6 +6,4 @@ const pwdFormula = () => {
   }
 };
 
-module.exports = function () {
-  pwdFormula;
-};
+module.exports = pwdFormula;
